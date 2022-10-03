@@ -7,6 +7,7 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   name = 'Nicolas';
   age = 18;
   img = 'https://st.depositphotos.com/1766887/2306/i/450/depositphotos_23063254-stock-photo-beautiful-white-sandy-beaches-of.jpg';
