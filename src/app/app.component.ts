@@ -12,6 +12,11 @@ export class AppComponent {
   age = 18;
   img = 'https://st.depositphotos.com/1766887/2306/i/450/depositphotos_23063254-stock-photo-beautiful-white-sandy-beaches-of.jpg';
   btnDisabled = true;
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  }
   person = {
     name : 'Nicolas',
     age : 18,
@@ -19,6 +24,11 @@ export class AppComponent {
     }
     names: string[] = ['Nico','Juli', 'Santi'];
     newName = '';
+    box = {
+      width: 100,
+      height: 100,
+      background: 'red'
+    };
     products : Product[]= [
       {
         name: 'El mejor juguete',
@@ -73,5 +83,10 @@ export class AppComponent {
     }
     deleteName(index: number){
       this.names.splice(index, 1)
+    }
+    onRegister() {
+      console.log(this.register
+        );
+      
     }
 }

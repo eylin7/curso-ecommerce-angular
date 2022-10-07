@@ -1,3 +1,111 @@
+<div class="container">
+<h1 class="formulario">Ecommerce</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input-group">
+    <label for="name"></label>
+    <input
+      class="input"
+      placeholder="name"
+      type="text"
+      name="name"
+      required
+      #nameInput6="ngModel"
+      [(ngModel)]="register.name"
+    />
+    <hr
+      class="line"
+      [ngClass]="{
+        valid: nameInput6.valid,
+        invalid: nameInput6.invalid
+      }"
+    />
+    <p class="message" [class.isvalid]="nameInput6.invalid">
+      this space is required
+    </p>
+  </div>
+  <div class="input-group">
+    <label for="email"></label>
+    <input
+      class="input"
+      placeholder="email"
+      type="email"
+      name="email"
+      required
+      #nameInput8="ngModel"
+      [(ngModel)]="register.email"
+    />
+    <hr
+      class="line-email"
+      [ngClass]="{
+        valid: nameInput7.valid,
+        invalid: nameInput7.invalid
+      }"
+    />
+    <p class="email1" [class.isvalid]="nameInput8.invalid">
+      this space is required
+    </p>
+  </div>
+  <div class="input-group">
+    <label for="password"></label>
+    <input
+      class="input"
+      placeholder="password"
+      type="password"
+      name="password"
+      required
+      #nameInput7="ngModel"
+      [(ngModel)]="register.password"
+    />
+    <hr
+      class="line-password"
+      [ngClass]="{
+        valid: nameInput7.valid,
+        invalid: nameInput7.invalid
+      }"
+    />
+    <p class="password1" [class.isvalid]="nameInput7.invalid">
+      this space is required
+    </p>
+  </div>
+  <div class="btn">
+    <button class="register" [disabled]="myForm.invalid" type="submit">
+      Registrar
+    </button>
+    <!-- <button class="accion" type="button">Acción</button> -->
+  </div>
+</form>
+</div>
+<hr />
+<h1>NgClass & NgStyle</h1>
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name" />
+<hr
+  class="line-error"
+  [ngClass]="{
+    valid: nameInput4.valid,
+    invalid: nameInput4.invalid
+  }"
+/>
+<p class="message-error" [class.isvalid]="nameInput4.invalid">
+  El campo es requerido
+</p>
+<div class="style">
+  <div>
+    <input type="number" [(ngModel)]="box.width" />
+    <input type="number" [(ngModel)]="box.height" />
+    <input type="color" [(ngModel)]="box.background" />
+  </div>
+  <div>
+    <div
+      [ngStyle]="{
+        'width.px': box.width,
+        'height.px': box.height,
+        'background-color': box.background,
+        display: 'block'
+      }"
+    ></div>
+  </div>
+</div>
+<hr />
 <h1>Class y Style</h1>
 <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" />
 <p class="message-error" [class.isvalid]="nameInput2.invalid">
@@ -5,7 +113,9 @@
 </p>
 <label>Nombre</label>
 <input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name" />
-<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Texto texto texto</p>
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">
+  Texto texto texto
+</p>
 <div class="styles">
   <div>
     <input type="text" [(ngModel)]="widthImg" />

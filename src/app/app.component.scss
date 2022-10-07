@@ -1,3 +1,6 @@
+.container{
+    background-image: url(../assets/image/ecommerce.png);
+}
 .box{
     height:200px;
     width: 200px;
@@ -18,6 +21,39 @@
     }
     
 }
+
+.message{
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: all linear 1s;
+    &.isvalid {
+        opacity:1;
+        border-color: red;
+        width: 10em
+    }
+}
+.password1{
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: all linear 1s;
+    &.isvalid {
+        opacity:1;
+        border-color: red;
+        width: 10em
+    }
+}
+.email1{
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: all linear 1s;
+    &.isvalid {
+        opacity:1;
+        border-color: red;
+        width: 10em
+        
+    }
+}
+
 .message-error{
     background:red;
     color: white;
@@ -25,6 +61,49 @@
     transition: all linear 1s;
     &.isvalid {
         opacity:1;
+        border-color: red;
+    }
+   
+    
+}
+.line{
+    height: 0;
+    border-bottom: 1px solid;
+    &.isvalid{
+        border-color: red;
+    }
+    &.valid{
+        border-color: rgba(0, 128, 0, 0.741);
+    }
+}
+.line-error{
+    height: 0;
+    border-bottom: 1px solid;
+    &.isvalid{
+        border-color: red;
+    }
+    &.valid{
+        border-color: rgba(0, 128, 0, 0.741);
+    }
+}
+.line-password{
+    height: 0;
+    border-bottom: 1px solid;
+    &.isvalid{
+        border-color: red;
+    }
+    &.valid{
+        border-color: rgba(0, 128, 0, 0.741);
+    }
+}
+.line-email{
+    height: 0;
+    border-bottom: 1px solid;
+    &.isvalid{
+        border-color: red;
+    }
+    &.valid{
+        border-color: rgba(0, 128, 0, 0.741);
     }
 }
 .styles{
@@ -32,6 +111,66 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
 }
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px;
+    font-family:fantasy;
+    color: rgb(0, 0, 0);
+}
+.input-group{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 18em;
+   border: none;
+   border-radius: 0.3em;
+   margin: 0.5em; 
+   background:  #874ea0dc  ;
+   padding: 20px;
+   margin: auto;
+   margin-top: 30px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+   color: rgb(0, 0, 0);
+}
+.input-group:hover {
+    transition-duration: 1ms;
+    box-shadow: 0 16px 20px rgba(139, 17, 17, 0.2);
+    font-size: 16px;
+}
+.input{
+    width: 250px;
+    height: 25px;
+    margin: auto;
+   
+    
+}
+.register {
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    background-color:  #f4d03f;
+}
+.register:hover{
+    transition-duration: 1ms;
+    box-shadow: 0 16px 20px rgba(139, 17, 17, 0.2);
+    font-size: 16px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(208, 21, 21);
+
+}
+
+
 @media screen and (min-width:40em ){
     .products---grid{
         display: grid;
